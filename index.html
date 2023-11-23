@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <title>Vanil'no</title>
+</head>
+
+<body>
+    <header>
+        <a class="knopki"><img src = "img/корзина.svg"></a>
+        <a class="knopki"><img src = "img/like.svg"></a>
+        <a class="knopki"><img src = "img/поиск.jpg"></a>
+        <p class="knopki">Контакты</p>
+        <p class="knopki">Доставка</p>
+        <a class="knopki">Отзывы</a>
+        <a class="knopki">Ассортимент</a>
+    </header>
+
+    <div class="photo">
+        <div class="big-pic">
+            <img class="big" src="img/главная.jpg">
+            <p class="img-photo1">VANIL'NO</p>
+            <p class="img-photo2">Кондитерская</p>
+        </div>
+
+        <div>
+            <p class="text">Bestsellers</p>
+        </div>
+
+        <div class="hit">
+            <div class="kartochki">
+                <img class = "hit1" src="img/хит1.jpg">
+                <p class="price">250 p.</p>
+                <p class="name">Миндальный круассан</p>
+            </div>
+            <div class="kartochki">
+                <img class = "hit1" src="img/хит2.jpg">
+                <p class="price">1400 p.</p>
+                <p class="name">Муссовые пирожные в форме серда “Ежевика Брауни”</p>
+            </div>
+            <div class="kartochki">
+                <img class = "hit1" src="img/хит3.jpg">
+                <p class="price">2550 p.</p>
+                <p class="name">Чизкейк “Tiramisu”</p>
+            </div>
+            <div class="kartochki">
+                <img class = "hit1" src="img/хит4.jpg">
+                <p class="price">1200 р.</p>
+                <p class="name">Меренговый рулет с вишней</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="about">
+            <p>About</p>
+        </div>
+
+        <div class="info-text">
+            <p>Vanil’no — это не просто кондитерская, это место, отправляющее вас в захватывающее путешестие по миру гастрономии.
+                Здесь каждый кусочек сладости является произведением искусства, а каждый вкус – уникальным сочетанием,
+                пробуждающим все вкусовые сосочки нашего языка.</p>
+            <p>Рецептура каждого десерта разрабатывается на протяжении долгих лет опыта и экспериментов.
+                Шеф-повары, пекари и кондитеры постоянно ищут новые великолепные комбинации ингредиентов
+                и готовят десерты так, чтобы каждый кусочек взрывался ароматом и радовал гурманов своими вкусовыми нотками..</p>
+            <p>Загляните в Vanil’no и почувствуйте магию наших десертов, позвольте себе окунуться в путешествие,
+                где каждая вкусовая нота приоткрывает двери в новый мир наслаждения.</p>
+        </div>
+    </div>
+
+    <div class="back">
+        <div class="pict">
+            <div class="verh">
+                <img src="img/подвал1.jpg">
+                <img src="img/подвал3.jpg">
+            </div>
+            <div class="nizh">
+                <img src="img/подвал2.jpg">
+                <img src="img/подвал4.jpg">
+            </div>
+        </div>
+
+        <div class="vvod">
+            <p class="otz">Оставить отзыв</p>
+            <input id="input" type="text" maxlength="200">
+            <!-- <button class="but">Отправить</button> -->
+            <button class="but" onclick="clearInput()">Отправить</button>
+        </div>
+
+        <div id="reviews-container"></div>
+    </div>
+
+    <script src="server.js"></script>
+
+
+</body>
