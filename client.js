@@ -5,7 +5,7 @@ document.getElementById('but').addEventListener('click', async function (event) 
 
     const reviewInput = document.getElementById('input');
     const reviewText = reviewInput.value;
-
+    console.log('aboba');
     // Отправка отзыва на сервер
     const response = await fetch('http://localhost:3001/saveReview', {
         method: 'POST',
