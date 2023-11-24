@@ -8,9 +8,11 @@ document.getElementById('but').addEventListener('click', async function (event) 
     console.log('aboba');
     // Отправка отзыва на сервер
     const response = await fetch('http://localhost:3001/saveReview', {
+        mode: 'no-cors',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin', '*'
         },
         body: JSON.stringify({ comment: reviewText }),
     });
