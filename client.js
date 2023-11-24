@@ -1,5 +1,6 @@
 
 document.getElementById('but').addEventListener('click', async function (event) {
+    document.getElementById('input').value = ''; // Очистить поле ввода
     event.preventDefault();
 
     const reviewInput = document.getElementById('input');
@@ -23,7 +24,3 @@ document.getElementById('but').addEventListener('click', async function (event) 
     }
 });
 
-function clearInput()
-{
-  document.getElementById('input').value = ''; // Очистить поле ввода
-}
