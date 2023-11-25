@@ -13,7 +13,7 @@ header{
 
 .knopki{
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 25px;
     transition: all 0.3s ease
 }
 
@@ -22,15 +22,65 @@ header{
     opacity: 0.8; /* Уменьшаем прозрачность кнопки при наведении */
 }
 
+/* .kartochki{
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+    align-items: center;
+    font-size: 23px
+} */
+
+.kartochki {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+    justify-content: center; /* Выравниваем элементы по центру */
+    padding: 10px; /* Добавляем внутренний отступ между элементами */
+    align-items: center;
+    font-size: 23px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.kartochki-item {
+    flex: 1 1 300px; /* Устанавливаем желаемую ширину элемента (можно изменить значение) */
+    margin: 10px; /* Добавляем внешний отступ между элементами */
+    max-width: calc(50% - 20px); /* Устанавливаем максимальную ширину элемента, чтобы они не выходили за пределы body */
+    box-sizing: border-box; /* Учитываем внешний отступ в общей ширине элемента */
+}
+
+.hit1{
+    height:auto;
+    width: 100%;
+}
+.verh{
+    height:auto;
+    width: 100%;
+}
+
+.nizh{
+    height:auto;
+    width: 100%;
+}
+
 .kartochki:hover{
     border: 1px solid;
     transition: 1ms;
-
 }
 
 .big-pic{
     text-align: center;
     position: relative;
+    padding: 0px 0px 58% 0px;
+} 
+
+.big{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .photo{
@@ -61,20 +111,14 @@ header{
 
 .hit{
     display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
 }
 
 .text{
     font-size: 30px;
 }
 
-.kartochki{
-    display: flex;
-    flex-direction: column;
-    padding-right: 15px;
-    padding-left: 15px;
-    align-items: center;
-    font-size: 23px
-}
 
 .name{
     margin-top: 0px;
@@ -110,6 +154,7 @@ input{
     border: 1px solid;
     text-align: left;
     vertical-align: top; 
+
 }
 
 .vvod{
@@ -144,13 +189,6 @@ input{
     height: 40px;
 }
 
-/* footer{
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding-bottom: 10px;
-} */
-
 
 /* Для маленьких экранов */
 @media screen and (max-width: 768px) {
@@ -162,18 +200,27 @@ input{
     header {
         padding-bottom: 5px;
     }
+    
+    .img-photo1 {
+        font-size: 60px; /* Adjust the font size for small screens */
+    }
+    
+    .img-photo2 {
+        font-size: 30px; /* Adjust the font size for small screens */
+    }
+
 
     .knopki {
         padding-left: 15px;
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .kartochki {
         font-size: 18px;
         padding-right: 10px;
         padding-left: 10px;
-        width: 100%; 
-        height: auto; 
+        width: 100%; /* Изменение ширины картинок на 100% для маленьких экранов */
+        height: auto; /* Автоматическое подстраивание высоты */
     }
 
     .name {
@@ -186,6 +233,15 @@ input{
     .about {
         font-size: 50px;
         width: 100%;
+    }
+
+
+    .info{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(246, 246, 244);
     }
 
     .info-text {
@@ -209,13 +265,48 @@ input{
 
     .hit{
         flex-wrap: wrap;
+        max-width: 100%;
     }
 
     .pict{
         display: flex;
-        flex-direction: column;
-        width: 100%; 
+        flex-direction: row;
+        width: 100%; /* Изменение ширины картинок на 100% для маленьких экранов */
+        height: auto; /* Автоматическое подстраивание высоты */
+    }
+
+    .nizh{
+        display: flex;
+        flex-direction: row;
+        height:auto;
+        width: 100%;
+    }
+
+    .verh{
+        display: flex;
+        flex-direction: row;
+        height:auto;
+        width: 100%;
+    }
+
+
+
+    .big-pic{
+        max-width: 100%;
         height: auto;
+        display: block;
+    }
+
+    .big{
+        width: 100%;
+        height: auto;
+    }
+
+    .back{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(246, 246, 244);
     }
 
 }
@@ -231,18 +322,29 @@ input{
         padding-bottom: 7px;
     }
 
+
+    .img-photo1 {
+        font-size: 80px; /* Adjust the font size for medium screens */
+    }
+    
+    .img-photo2 {
+        font-size: 35px; /* Adjust the font size for medium screens */
+    }
+
+
     .knopki {
         padding-left: 20px;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .kartochki {
         font-size: 20px;
         padding-right: 15px;
         padding-left: 15px;
-        width: 100%; 
-        height: auto; 
+        width: 100%; /* Изменение ширины картинок на 100% для маленьких экранов */
+        height: auto; /* Автоматическое подстраивание высоты */
     }
+
 
     .name {
         font-size: 25px;
@@ -261,7 +363,7 @@ input{
     }
 
     input {
-        width: 70%;
+        width: 50%;
         height: 220px;
     }
 
@@ -282,11 +384,23 @@ input{
     .pict{
         display: flex;
         flex-direction: column;
-        width: 50%; 
-        height: auto; 
+        width: 100%; /* Изменение ширины картинок на 100% для маленьких экранов */
+        height: auto; /* Автоматическое подстраивание высоты */
     }
-    
+
+    .big-pic{
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    .big{
+        width: 100%;
+        height: auto;
+    }
+
+
 }
+
 
 /* Для больших экранов */
 @media screen and (min-width: 1025px) {
@@ -299,17 +413,25 @@ input{
         padding-bottom: 10px;
     }
 
+    .img-photo1 {
+        font-size: 100px; /* Adjust the font size for large screens */
+    }
+    
+    .img-photo2 {
+        font-size: 40px; /* Adjust the font size for large screens */
+    }
+
     .knopki {
         padding-left: 30px;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .kartochki {
         font-size: 23px;
         padding-right: 20px;
         padding-left: 20px;
-        width: 100%; 
-        height: auto; 
+        width: 100%; /* Изменение ширины картинок на 100% для маленьких экранов */
+        height: auto; /* Автоматическое подстраивание высоты */
     }
 
     .name {
@@ -346,8 +468,20 @@ input{
     .pict{
         display: flex;
         flex-direction: column;
-        width: 50%; 
-        height: auto; 
+        width: 50%; /* Изменение ширины картинок на 100% для маленьких экранов */
+        height: auto; /* Автоматическое подстраивание высоты */
+    }
+
+    .big-pic{
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    .big{
+        width: 100%;
+        height: auto;
     }
 
 }
+
+
